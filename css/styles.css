@@ -28,10 +28,11 @@
 	body {
 		font-family: Verdana, "Helvetica Neue", Helvetica, sans-serif;
 		font-size: 17px;
-		color: rgb(43, 43, 43);
 		line-height: 1.5;
-		background-image: url("https://images.unsplash.com/photo-1485160497022-3e09382fb310?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
-		background-size: 1440pt;
+		/* background-color: #262626;  */
+		background-color: #8400ff; 
+		/* background-image: url('../img/back.jpg'); */
+		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
 
@@ -56,6 +57,21 @@
 		align-items: center;
 	}
 
+	#scalable_logo {
+		position: fixed;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		background: rgb(255, 255, 255) url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDQ3MyAxMTUiIHdpZHRoPSI0NzMiIGhlaWdodD0iMTE1Ij4KCTx0aXRsZT5zY2FsYWJsZS1zdmc8L3RpdGxlPgoJPHN0eWxlPgoJCS5zMCB7IGZpbGw6ICMwMDAwMDAgfSAKCTwvc3R5bGU+Cgk8cGF0aCBpZD0iTGF5ZXIiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xhc3M9InMwIiBkPSJtMCA4NnYtNTYuOWwxNC4zLTAuOCAwLjggOS44aDEuNHEyLTIuNyA0LjYtNS4xIDIuNi0yLjUgNi00IDMuNS0xLjQgNy45LTEuNCA2LjUgMCAxMC4xIDMuMyAzLjEgMi43IDQuNSA3LjRoMC45cTItMi44IDQuOC01LjMgMi44LTIuNCA2LjMtNCAzLjYtMS40IDgtMS40IDguNSAwIDEyLjcgNS4xIDQuMiA1LjEgNC4yIDE1djM4LjNoLTE3di0zMi44cTAtNS0xLjYtNy42LTEuNS0yLjUtNS42LTIuNS0yLjMgMC00LjMgMS0xLjkgMS0zLjYgMi43LTEuNCAxLjUtMi41IDMuMnYzNmgtMTd2LTMyLjhxMC01LTEuNi03LjUtMS42LTIuNi01LjYtMi42LTIuMyAwLTQuMiAxLTIgMS0zLjYgMi44LTEuNiAxLjYtMi44IDMuNnYzNS41em0xMTAuNSAxLjRxLTUgMC04LjYtMi0zLjYtMi4xLTUuNy01LjgtMi0zLjgtMi05IDAtNC44IDEuNy04IDEuNy0zLjMgNC40LTUuNCAyLjctMiA2LTMuMSAzLjItMS4xIDYuMi0xLjZsMTUuOS0yLjVxMC4xLTMuMy0xLjMtNS4xLTEuMy0xLjktNC0yLjYtMi41LTAuOC02LjEtMC44LTIgMC00LjIgMC40LTIuMyAwLjMtNC44IDAuOS0yLjUgMC42LTUuMSAxLjUtMi43IDEtNS4zIDIuM2wtMC44LTE0LjYgNC44LTEuNXEyLjctMC44IDYtMS40IDMuMS0wLjcgNi43LTEuMSAzLjUtMC40IDcuMy0wLjQgNy4xIDAgMTIuMSAyIDUuMSAyLjEgNy44IDYuNiAyLjcgNC40IDIuNyAxMS42djM4LjJoLTE0LjZsLTEtNy42aC0xLjNxLTEuNiAyLjItNCA0LjMtMi4zIDItNS41IDMuNC0zLjIgMS4zLTcuMyAxLjN6bTYuOC0xMy4ycTIgMCA0LTEgMi0wLjkgMy43LTIuNiAxLjctMS44IDMtNC4xdi04LjhsLTEuOSAxLTMgMS01LjYgMS4xcS0yIDAuNC0zLjYgMS40LTEuNCAxLTIuMyAyLjUtMC44IDEuNS0wLjggMy41IDAgMy4zIDIgNC42IDIgMS40IDQuNCAxLjR6bTYxLjggMTMuM3EtNi4zIDAtMTAuOC0xLjgtNC41LTItNi45LTYuMi0yLjMtNC4yLTIuMy0xMS4xdi0yNi41aC05LjF2LTEyLjhoOS4xdi0xOC41bDE2LjgtM3YyMS41aDE3LjF2MTIuOWgtMTcuMXYyMXEwIDUuMiAxLjggOCAyIDIuNiA2LjMgMi42IDEuOCAwIDQtMC42IDIuMi0wLjcgNC4yLTIuMWwxIDEzLjhxLTEuNiAwLjktMy44IDEuNS0yLjMgMC43LTUgMS0yLjcgMC4zLTUuMyAwLjN6bTM4LjktMS41aC0xN3YtNTYuOWwxNy0wLjV6bS04LjYtNjUuN3EtNC44IDAtNy42LTIuMi0yLjgtMi4zLTIuOC03LjMgMC00LjYgMi44LTcgMi44LTIuNCA3LjctMi40IDQuOCAwIDcuNSAyLjUgMi44IDIuNSAyLjggNi45IDAgNS0yLjcgNy4zLTIuOCAyLjItNy43IDIuMnoiLz4KCTxwYXRoIGlkPSJMYXllciIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGFzcz0iczAiIGQ9Im0yNDkuOCA4Ny41cS03LjggMC0xMi44LTQuMi01LjEtNC4yLTcuNi0xMS0yLjQtNi45LTIuNC0xNC44IDAtOC41IDIuNi0xNS4zIDIuNi02LjggNy43LTEwLjcgNS4xLTQgMTIuNy00IDMuNCAwIDYuMiAxIDIuOSAwLjggNSAyLjUgMi4zIDEuNiAzLjggNGgxLjR2LTMyLjdsMTctMS41djg1LjJoLTE0LjVsLTEtNy41aC0xLjJxLTIgMy00LjYgNS0yLjUgMi01LjYgMy0zIDEtNi43IDF6bTYuNS0xNC40cTIuMyAwIDQuMi0wLjggMi0wLjggMy40LTIuMyAxLjQtMS40IDIuNS0zLjN2LTE5LjRxLTEuMi0xLjYtMi44LTIuNy0xLjUtMS4yLTMuNC0xLjctMS45LTAuNy0zLjktMC43LTQgMC02LjYgMi4xLTIuNyAyLjEtNCA1LjctMS4zIDMuNS0xLjMgNy42IDAgNCAxLjIgNy41IDEuMyAzLjUgNCA1LjcgMi42IDIuMyA2LjcgMi4zem00MS4yIDkuNHEtNC4zLTUuMS00LjMtMTUuMXYtMzguNGwxNy0wLjV2MzMuN3EwIDUgMS42IDcuNSAxLjcgMi41IDYgMi41IDIuMyAwIDQuMy0xIDItMSAzLjctMi42IDEuNy0xLjcgMy0zLjh2LTM1LjdoMTd2NTYuOWgtMTQuMmwtMC44LTloLTEuNXEtMS44IDIuNy00LjYgNS4xLTIuNyAyLjQtNi4zIDQtMy41IDEuNC04IDEuNC04LjUgMC0xMi45LTV6bTc5LjMgNXEtNy44IDAtMTIuOS00LjItNS00LjItNy41LTExLTIuNS02LjktMi41LTE0LjggMC04LjUgMi42LTE1LjMgMi42LTYuOCA3LjctMTAuNyA1LjItNCAxMi44LTQgMy4zIDAgNi4yIDEgMi44IDAuOCA1IDIuNSAyLjIgMS42IDMuNyA0aDEuNHYtMzIuN2wxNy0xLjV2ODUuMmgtMTQuNGwtMS03LjVoLTEuM3EtMiAzLTQuNiA1LTIuNSAyLTUuNiAzLTMgMS02LjYgMXptNi40LTE0LjRxMi40IDAgNC4yLTAuOCAyLTAuOCAzLjQtMi4zIDEuNS0xLjQgMi41LTMuM3YtMTkuNHEtMS4xLTEuNi0yLjctMi43LTEuNi0xLjItMy41LTEuNy0xLjgtMC43LTMuOC0wLjctNCAwLTYuNyAyLjEtMi42IDIuMS00IDUuNy0xLjMgMy41LTEuMyA3LjYgMCA0IDEuMiA3LjUgMS40IDMuNSA0IDUuNyAyLjcgMi4zIDYuNyAyLjN6bTUxLjMgMTQuM3EtNC45IDAtOC41LTItMy43LTIuMS01LjctNS44LTItMy44LTItOSAwLTQuOCAxLjYtOCAxLjctMy4zIDQuNC01LjQgMi44LTIgNi0zLjEgMy4yLTEuMSA2LjMtMS42bDE1LjgtMi41cTAuMS0zLjMtMS4yLTUuMS0xLjQtMS45LTQtMi42LTIuNi0wLjgtNi4yLTAuOC0yIDAtNC4yIDAuNC0yLjMgMC4zLTQuOCAwLjktMi40IDAuNi01LjEgMS41bC01LjMgMi4yLTAuOC0xNC41IDQuOC0xLjUgNi0xLjVxMy4yLTAuNiA2LjctMSAzLjYtMC40IDcuMy0wLjQgNy4yIDAgMTIuMiAyIDUgMi4xIDcuNyA2LjYgMi43IDQuNCAyLjcgMTEuNnYzOC4yaC0xNC41bC0xLjEtNy42aC0xLjNxLTEuNiAyLjItMy45IDQuMy0yLjMgMi01LjYgMy40LTMuMiAxLjMtNy4zIDEuM3ptNi44LTEzLjJxMiAwIDQtMSAyLTAuOSAzLjctMi42IDEuNy0xLjggMy00LjJ2LTguN2wtMS44IDEtMy4xIDEtNS42IDEuMXEtMiAwLjQtMy41IDEuNC0xLjUgMS0yLjQgMi41LTAuOCAxLjUtMC44IDMuNSAwIDMuMyAyIDQuNiAyIDEuNCA0LjUgMS40em0tMTMwLjkgMTMuM3EwLjEgMCAwLjEgMHoiLz4KPC9zdmc+");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 2%;
+		z-index: 1;
+		mix-blend-mode: screen;
+	}
+
 	#logo_wrapper .button {
 		font-size: 20px;
 		text-decoration: none;
@@ -73,7 +89,7 @@
 	}
 
 	#logo_wrapper .button:active {
-		background-color: rgba(0, 0, 0, 0.726);
+		background-color: rgb(119, 65, 65)
 		color: #fff;
 	}
 
@@ -88,13 +104,78 @@
 	#contentinfo .button {
 		text-decoration: none;
 	}
+
+
+	.content {
+		position: relative;
+		height: 100vh;
+	}
+	
+	.content-images {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		min-height: 50vh;
+		text-align: center;
+		color:white;
+	}
+	
+	.text {
+		color:white;
+		padding: 2rem 20rem;
+		font-size: 1.5rem;
+	}
+	/* Parallax effect */
+
+	nav {
+		position: fixed;
+		display:flex;
+		margin-top: 30pt;
+		justify-content: space-between;
+		width: 100%;
+		z-index: 1;
+	}
+
+	nav .button {
+		margin-right: 60px;
+		height: fit-content;
+		background-color: white;
+	}
+
+
+	.parallax_wrapper {
+		height:300vh;
+		overflow:scroll;
+	}
+	
+	.parallax {
+		height: 200vh;
+		height: auto;
+		background: black;
+	}
+	
+	.parallax img {
+		position: absolute;
+		width: 100%;
+		object-fit: cover;
+	}
+
+
+	/* <div id="parallax">
+	<img src="img/prlx/00_back.jpg" class="back" alt="" />
+	<img src="img/prlx/0_rocks.png" class="rocks" alt="" />
+	<img src="img/prlx/1_brock.png" class="brock" alt="" />
+	<img src="img/prlx/2_mtn.png" class="mtn" alt="" />
+	<img src="img/prlx/3_farmtn.png" class="farmtn" alt="" />
+	<img src="img/prlx/4_clouds.png" class="clouds" alt="" />
+</div> */
     
 /* ---------------------------------------------------------
    Print styles
    ---------------------------------------------------------*/
 @media print {
     * {
-        color:#000 !important;
+        color:rgb(0, 0, 0) !important;
         box-shadow:none !important;
         text-shadow:none !important;
         background:transparent !important;
@@ -119,7 +200,7 @@
         overflow:hidden;
     }
 
-    figure img { border:1px solid #000; }
+    figure img { border:1px solid rgb(0, 0, 0); }
 }
 
 /***************************************************
@@ -128,15 +209,15 @@
  * W. https://svgartista.net
  **************************************************/
 
- svg .svg-elem-1 {
+svg .svg-elem-1 {
 	stroke-dashoffset: 2621.4765625px;
 	stroke-dasharray: 2621.4765625px;
 	stroke: #BFC9FF;
 	transition: stroke-dashoffset 10s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0s,
-				  fill 1.7s cubic-bezier(0.23, 1, 0.32, 1) 2.8s;
-  }
+	fill 1.7s cubic-bezier(0.23, 1, 0.32, 1) 2.8s;
+}
   
-  svg.active .svg-elem-1 {
+svg.active .svg-elem-1 {
 	stroke-dashoffset: 0;
 }
 
@@ -154,17 +235,16 @@ svg .svg-elem-2 {
 	fill: #7EA1C4;
 }
   
-  svg .svg-elem-3 {
-	stroke-dashoffset: 1364.227783203125px;
-	stroke-dasharray: 1364.227783203125px;
-	fill: transparent;
-	transition: stroke-dashoffset 7s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.24s,
-				  fill 1.7s cubic-bezier(0.23, 1, 0.32, 1) 3s;
-  }
-  
-  svg.active .svg-elem-3 {
-	stroke-dashoffset: 0;
-	stroke: rgb(23, 23, 23);
-	fill: #322F33;
-  }
-  
+svg .svg-elem-3 {
+stroke-dashoffset: 1364.227783203125px;
+stroke-dasharray: 1364.227783203125px;
+fill: transparent;
+transition: stroke-dashoffset 7s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.24s,
+				fill 1.7s cubic-bezier(0.23, 1, 0.32, 1) 3s;
+}
+
+svg.active .svg-elem-3 {
+stroke-dashoffset: 0;
+stroke: rgb(23, 23, 23);
+fill: #322F33;
+}

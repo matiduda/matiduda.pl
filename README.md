@@ -4,8 +4,6 @@
     &larr; <i>click</i>
 </h1>
 
-Overview
-====
 
 ![simple sketch of the project](img/matiduda_sketch.png)
 
@@ -26,5 +24,6 @@ Built with
 
 - [HTML5 Bones](https://github.com/iandevlin/html5bones) - basic html template
 - [Normalize.css](http://necolas.github.com/normalize.css/), used by the above
-- [Background picture author](https://unsplash.com/@kilarov345)
-- [Inspiration](https://www.youtube.com/watch?v=QNTeq4QdOsQ)
+<br><br>
+- [Background picture](https://unsplash.com/@kilarov345)
+- inspired by [this tutorial](https://www.youtube.com/watch?v=htrE84htqhM) [that tutorial](https://www.youtube.com/watch?v=Nt70Ld0dJCM)
