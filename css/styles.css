@@ -25,17 +25,17 @@
 		transition: none;
 	}
 	
+	html {
+		scroll-behavior: smooth;
+	}
+
 	body {
 		font-family: Verdana, "Helvetica Neue", Helvetica, sans-serif;
 		font-size: 17px;
 		line-height: 1.5;
-		/* background-color: #262626;  */
-		background-color: #8400ff; 
-		/* background-image: url('../img/back.jpg'); */
 		background-size: contain;
+		background: #262626;
 		background-position: center;
-		background-repeat: no-repeat;
-
 	}
 
 	#logo_wrapper {
@@ -89,7 +89,7 @@
 	}
 
 	#logo_wrapper .button:active {
-		background-color: rgb(119, 65, 65)
+		background-color: rgb(119, 65, 65);
 		color: #fff;
 	}
 
@@ -125,51 +125,81 @@
 		padding: 2rem 20rem;
 		font-size: 1.5rem;
 	}
-	/* Parallax effect */
-
+	
 	nav {
 		position: fixed;
 		display:flex;
-		margin-top: 30pt;
 		justify-content: space-between;
 		width: 100%;
 		z-index: 1;
+		background-color: rgba(0, 0, 0, 0.205);
 	}
-
+	
 	nav .button {
 		margin-right: 60px;
 		height: fit-content;
-		background-color: white;
 	}
-
+	
+	/* Parallax effect */
 
 	.parallax_wrapper {
-		height:300vh;
-		overflow:scroll;
+		height: 100vh;
+		overflow-x: hidden;
+		overflow-y: auto;
+		perspective: 300px;
 	}
-	
-	.parallax {
-		height: 200vh;
-		height: auto;
-		background: black;
+
+	.parallax_group {
+		position: relative;
+		height: 100vh;
+		transform-style: preserve-3d;
 	}
-	
-	.parallax img {
+
+	.parallax-layer {
 		position: absolute;
-		width: 100%;
-		object-fit: cover;
+		inset: 0;
+		transform-style: preserve-3d;
+	}
+	
+	#back {
+		/* scale formula: 1 + ((Z_transform * -1) / perspective) */
+		transform: translateZ(-500px) scale( calc(1 + ( (-500 * -1) / 300)));
+	}
+
+	#fmtn {
+		transform: translateY(-1000px) translateZ(-200px) scale( calc(1 + ( (-200 * -1) / 300)));
+	}
+
+	#mtn {
+		transform: translateY(-800px) translateZ(-150px) scale( calc(1 + ( (-150 * -1) / 300)));
+	}
+
+	#rocks {
+		transform: translateY(400px) translateZ(50px) scale( calc(1 + ( (50 * -1) / 300)));
+	}
+
+	#clouds {
+		transform: translateY(1000px) translateZ(-300px) scale( calc(1 + ( (-300 * -1) / 300)));
 	}
 
 
-	/* <div id="parallax">
-	<img src="img/prlx/00_back.jpg" class="back" alt="" />
-	<img src="img/prlx/0_rocks.png" class="rocks" alt="" />
-	<img src="img/prlx/1_brock.png" class="brock" alt="" />
-	<img src="img/prlx/2_mtn.png" class="mtn" alt="" />
-	<img src="img/prlx/3_farmtn.png" class="farmtn" alt="" />
-	<img src="img/prlx/4_clouds.png" class="clouds" alt="" />
+	/* <div class="parallax-layer" id="back">
+	<img src="img/prlx/00_back.png" alt="" />
+</div>
+<div class="parallax-layer" id="fmtn">
+	<img src="img/prlx/3_farmtn.png" alt="" />
+</div>
+<div class="parallax-layer" id="mtn">
+	<img src="img/prlx/2_mtn.png" alt="" />
+</div>
+<div class="parallax-layer" id="clouds">
+	<img src="img/prlx/4_clouds.png" alt="" />
+</div>
+<div class="parallax-layer" id="rocks">
+	<img src="img/prlx/0_rocks.png" alt="" />
 </div> */
-    
+
+
 /* ---------------------------------------------------------
    Print styles
    ---------------------------------------------------------*/
