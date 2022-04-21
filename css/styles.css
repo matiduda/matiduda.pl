@@ -26,8 +26,9 @@
 		transition: none;
 	}
 	
-	html {
-		scroll-behavior: smooth;
+	*, html {
+
+		scroll-behavior: smooth !important;
 	}
 
 	body {
@@ -36,14 +37,14 @@
 		line-height: 1.5;
 		background-size: contain;
 		background-attachment: fixed;
-		background: #262626;
+		background: #000000;
 	}
 
 	html, body {
 		overflow: visible;
 	}
 
-	#info-wrap {
+	.info-wrap {
 		margin-top: auto;
 		height: auto;
 		width: 100vw;
@@ -66,13 +67,20 @@
 		padding: 20px;
 	}
 
-	
-
 	.textbox h1 {
 		transform: translateZ(100px);
 		text-align: center;
 		font-size: 20pt;
 		margin-top: 50px;
+	}
+
+	#projects {
+		margin-top: 2500px;
+	}
+	
+	#projects .textbox {
+		background-color: #404040;
+		color: white;
 	}
 
 
@@ -171,7 +179,6 @@
 	}
 
 	.parallax_group {
-		
 		position: relative;
 		height: 100vh;
 		transform-style: preserve-3d;
