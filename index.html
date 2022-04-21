@@ -79,23 +79,29 @@
 	</div>
 
 	<script type="text/javascript">
-		let scalble = document.querySelector('#scalable_logo');
+		let scalable = document.querySelector('#scalable_logo');
 		let prlx = document.querySelector('.parallax_wrapper');
 
         prlx.addEventListener("scroll", event => {
-            scalble.style.backgroundSize = 50 + prlx.scrollTop * prlx.scrollTop / 200  + 'px';
+			if(prlx.scrollTop > 3000) {
+				// Hide element
+				scalable.style.display = 'none';
+			} else {
+				scalable.style.display = 'block';
+			}
+            scalable.style.backgroundSize = 50 + prlx.scrollTop * prlx.scrollTop / 200  + 'px';
         }, { passive: true });
 
 		// Switch logo background depending on daytime
 		var currentTime = new Date().getHours();
 		if (7 > currentTime || currentTime >= 20) {
-			scalble.setAttribute('style', 'mix-blend-mode: multiply;');
-			scalble.style.filter = 'invert(100%)';
+			scalable.setAttribute('style', 'mix-blend-mode: multiply;');
+			scalable.style.filter = 'invert(100%)';
 
 		}
 		else {
-			scalble.setAttribute('style', 'mix-blend-mode: screen;');
-			scalble.style.filter = 'invert(0%)';
+			scalable.setAttribute('style', 'mix-blend-mode: screen;');
+			scalable.style.filter = 'invert(0%)';
 		}
 	</script>
 <!-- 
