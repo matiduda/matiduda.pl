@@ -202,15 +202,15 @@
 	}
 
 	#fmtn {
-		transform: translateY(-100px) translateZ(-300px) scale( calc(1 + ( (-300 * -1) / 300)));
+		transform: translateY(-300px) translateZ(-400px) scale( calc(1 + ( (-400 * -1) / 300)));
 	}
 
 	#mtn {
-		transform: translateY(390px) translateZ(-150px) scale( calc(1 + ( (-150 * -1) / 300)));
+		transform: translateY(390px) translateZ(-250px) scale( calc(1 + ( (-250 * -1) / 300)));
 	}
 
 	#rocks {
-		transform: translateY(600px) translateZ(-50px) scale( calc(1 + ( (-50 * -1) / 300)));
+		transform: translateY(700px) translateZ(-100px) scale( calc(1 + ( (-100 * -1) / 300)));
 	}
 
 	#clouds {
