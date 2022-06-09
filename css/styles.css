@@ -50,6 +50,7 @@
 	}
 	
 	#scalable_logo {
+		will-change: scale;
 		pointer-events: none;
 		background: rgb(255, 255, 255) url("../img/image.png");
 		background-repeat: no-repeat;
@@ -120,12 +121,13 @@
 	
 	.info-wrap {
 		height: auto;
+		padding-top: 50px;
 		width: 100vw;
-		margin-top: -100vw;
 		position: relative;
 		/* Center child horizontally*/
 		display: flex;
 		justify-content: center;
+
 	}
 
 	.textbox {
@@ -171,25 +173,70 @@
 	}
 
 	#aboutme {
-		margin-top: 00vw;
-		height: 200vh;
+		margin-top: 70vw;
+		margin-bottom: 100vh;
+	}
 
+	#abtextbox {
+		background-color: rgb(255, 255, 255);
+		color: rgb(0, 0, 0);
+		font-size: 15pt;
+		margin: 30%;
+		padding: 0.8%;
+		border-radius: 20px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 
 	#projects {
 		margin-top: 0vw;
 	}
-	
+
 	#projects .textbox {
-		background-color: #404040;
+		background-color: transparent;
+		width: 60vw;
 		color: white;
+		text-align: center;
+	}
+	
+	#aboutme .textbox {
+		background-color: rgba(255, 255, 255, 0.945);
+		width: auto;
+		max-width: 400px;
+		color: rgb(0, 0, 0);
+		font-size: 20pt;
+		text-align: left;
+		padding: 30px;
+		transform: translateY(-45vh);
 	}
 
 	#contact {
-		margin-top: 20vw;
-
-		height: 000vh;
 		transform: translateY(50vw);
+	}
+
+	.card {
+		width: 300px;
+		height: 200px;
+		padding: 2pc;
+		margin: 20pt;
+		margin-bottom: 30pt;
+		display: inline-block;
+		border-radius: 0.6pc;
+		background-color:rgb(156, 30, 23);
+	}
+
+	.label {
+		background-color: white;
+		width: fit-content;
+		height: fit-content;
+		padding-left: 30px;
+		padding-right: 30px;
+		border-radius: 15px;
+		font-family: 'Square Peg';
+		font-size: 20pt;
+		line-height: 60%;
+		color: rgb(41, 41, 41);
 	}
 
 	form {
