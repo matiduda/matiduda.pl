@@ -1,270 +1,382 @@
-/* ---------------------------------------------------------
-   HTML5 Bones
-   This stylesheet contains print styling and a section for 
-   you to simply add your own. This is a basic template 
-   after all.
-   ---------------------------------------------------------*/
-    
-   a:link { text-decoration: none; }
+a:link {
+	text-decoration: none;
+}
 
 
-   a:visited { text-decoration: none; }
-   
-   
-   a:hover { text-decoration: none; }
-   
-   
-   a:active { text-decoration: none; }
+a:visited {
+	text-decoration: none;
+}
 
-/* ---------------------------------------------------------
-   Author's styles
-   ---------------------------------------------------------*/
 
-	* {
-		margin: 0;
-		padding: 0;
-		transition: none;
-	}
+a:hover {
+	text-decoration: none;
+}
+
+
+a:active {
+	text-decoration: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	transition: none;
+}
+
+*,
+html {
+	scroll-behavior: smooth !important;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: 17px;
+	line-height: 1.5;
+	background-size: contain;
+	background-attachment: fixed;
+	background: #080808;
+}
+
+
+
+.logo {
+	filter: drop-shadow(4px 4px 0.4rem rgba(0, 0, 0, 0.432));
+}
+
+#scalable_logo {
+	will-change: scale;
+	pointer-events: none;
+	background: rgb(255, 255, 255) url("../img/image.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 5%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+
+nav {
+	position: fixed;
+	width: 100%;
+	height: 130px;
+	pointer-events: none;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+}
+
+.button_wrapper {
+	pointer-events: all;
+	margin-right: 40px;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+nav .button {
+	font-family: 'Inter', sans-serif;
+	font-size: 15pt;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	color: white;
+	filter: drop-shadow(4px 4px 0.4rem rgba(0, 0, 0, 0.432));
+	transition: 0.7s;
+}
+
+nav .button:hover {
+	transition: 0.7s;
+}
+
+.anim_uline {
+	display: inline-block;
+	position: relative;
+}
+
+.anim_uline:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 1px;
+	bottom: 0px;
+	left: 0;
+	background-color: rgb(255, 255, 255);
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+	filter: drop-shadow(4px 4px 0.4rem rgba(0, 0, 0, 0.432));
+}
+
+.anim_uline:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+/* Cards */
+
+.info-wrap {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 45px;
+	margin-bottom: 45px;
+}
+
+.textbox {
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	font-size: 15pt;
+	margin: 30%;
+	padding: 0.8%;
+	border-radius: 20px;
+	position: absolute;
+}
+
+.textbox p {
+	margin: 20px;
+	text-align: center;
+}
+
+.textbox a {
+	text-decoration: underline;
+}
+
+#hello {
+	height: 50%;
+	/* Center child horizontally*/
+	display: flex;
+	justify-content: center;
+}
+
+#hellot {
+	width: fit-content;
+	padding-left: 30px;
+	padding-right: 30px;
+	height: fit-content;
+}
+
+.textbox h1 {
+	text-align: center;
+	font-size: 20pt;
+}
+
+#aboutme {
+	margin-bottom: 0;
+}
+
+.abtextbox {
+	background-color: rgb(255, 255, 255);
+	position: absolute;
+	color: rgb(0, 0, 0);
+	font-size: 16pt;
+	width: 500px;
+	padding: 1.3em;
+	border-radius: 20px;
+}
+
+#label-projects {
+	transform: translateY(-500px);
+}
+
+#projects {
+	margin-top: 0;
+}
+
+#projects .textbox {
+	background-color: transparent;
+	color: white;
+	text-align: center;
+}
+
+#aboutme .textbox {
+	background-color: rgba(255, 255, 255, 0.945);
+	width: auto;
+	max-width: 400px;
+	color: rgb(0, 0, 0);
+	font-size: 20pt;
+	text-align: left;
+	padding: 30px;
+}
+
+#contact-wrap {
+	position: absolute;
+	display: flex;
+}
+
+#contact-box {
+	max-width: 400px;
+}
+
+#contact-box h1 {
+	padding-bottom: 10px;
+}
+
+.cardbox {
+	position: absolute;
+	max-width: 900px;
+	flex-wrap: wrap;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.card {
+	overflow: hidden;
+	max-width: 35ch;
+	padding: 10rem 0 0;
+	margin: 20pt;
+	flex: 50%;
+	border-radius: 0.6pc;
+	background-size: cover;
+	background-position: center;
+	color: white;
+	transition: transform 500ms ease-out;
+}
+
+#biba {
+	background-image: url(/img/cards/bb77.jpg);
+}
+
+#tic {
+	background-image: url(/img/cards/tic.jpg);
+}
+
+#lab {
+	background-image: url(/img/cards/lab.jpg);
+}
+
+#bot {
+	background-image: url(/img/cards/bot.jpg);
+}
+
+.card-content {
+	--padding: 1.5rem;
+	padding: var(--padding);
+	background: linear-gradient(hsl(0 0% 0% / 0),
+			hsl(0 0% 0% / 0.3) 20%,
+			hsl(0 0% 0% / 1));
+	border-radius: 0.6pc;
+	overflow: hidden;
+	transform: translateY(65%);
+	transition: transform 500ms ease;
+
+}
+
+.card:hover .card-content {
+	transform: translateY(0);
+}
+
+.card-title {
+	padding-bottom: 0.4em;
+	position: relative;
+	width: max-content;
+	max-width: 100%;
+	margin-bottom: 0.5em;
+}
+
+.card-title::after {
+	content: "";
+	position: absolute;
+	height: 3px;
+	left: calc(var(--padding) * -1);
+	bottom: 0;
+	width: calc(100% + var(--padding));
+	background-color: white;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 500ms ease;
+}
+
+.card:hover .card-title::after {
+	transform: scaleX(1);
+}
+
+
+.card-body {
+	margin-bottom: 1.5em;
+
+}
+
+.card-button {
+	font-family: 'Inter';
+	font-weight: bold;
+	cursor: pointer;
+	display: inline;
+	text-decoration: none;
+	color: black;
+	background-color: rgb(5, 202, 251);
+	padding: 0.5em 1em;
+	transition: 0.3s;
+	border-radius: 0.2pc;
+}
+
+.card-button:hover,
+.card-button:focus {
+	background-color: white;
+}
+
+.label {
+	background-color: white;
+	width: fit-content;
+	height: fit-content;
+	padding: 0.6em;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-radius: 15px;
+	font-family: 'Inter';
+	font-size: 13pt;
+	line-height: 60%;
+	color: rgb(41, 41, 41);
+	transform: translateY(-300px);
+}
+
+form {
+	width: 100%;
+	display: flexbox;
+}
+
+input {
+	padding: 0.3em 0px 0.3em;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 7px;
+	color: rgb(14, 14, 14);
+}
+
+textarea {
+	padding: 0.3em 0px 0.3em;
+	text-align: center;
+	width: 100%;
+	min-width: 100%;
+	margin-bottom: 20px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.075);
+	color: rgb(14, 14, 14);
+}
+
+#send-button {
+	margin-left: 39%;
+	margin-bottom: 20px;
+	border: none;
 	
-	*, html {
+	font-family: 'Inter';
+	font-weight: bold;
+	cursor: pointer;
+	display: inline;
+	text-decoration: none;
+	color: black;
+	background-color: rgb(5, 202, 251);
+	padding: 0.5em 1em;
+	transition: 0.3s;
+	border-radius: 0.2pc;
+}
 
-		scroll-behavior: smooth !important;
-	}
-
-	body {
-		font-family: 'Inter', sans-serif;
-		font-size: 17px;
-		line-height: 1.5;
-		background-size: contain;
-		background-attachment: fixed;
-		background: #000000;
-	}
-
-	html, body {
-		overflow: visible;
-	}
-
-
-	.logo {
-		filter: drop-shadow(4px 4px 0.4rem rgba(0, 0, 0, 0.432));
-	}
-	
-	#scalable_logo {
-		will-change: scale;
-		pointer-events: none;
-		background: rgb(255, 255, 255) url("../img/image.png");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 5%;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		z-index: 2;
-	}
-
-
-	nav {
-		position: fixed;
-		width: 100%;
-		height: 130px;
-		pointer-events: none;
-		z-index: 1;
-		display: flex;
-		align-items: center;
-	}
-	
-	.button_wrapper {
-		pointer-events: all;
-		margin-right: 40px;
-		width: 100%;
-		display: flex;
-		justify-content: space-around;
-	}
-
-	nav .button {
-		font-family: 'Square Peg', cursive;
-		font-size: 25pt;
-		color: white;
-		transition: 0.7s;
-		filter: drop-shadow(4px 4px 0.4rem rgba(0, 0, 0, 0.432));
-	}
-
-	nav .button:hover {
-		color: rgb(247, 198, 175);
-		transition: 0.3s;
-	}
-
-	.anim_uline {
-		display: inline-block;
-		position: relative;
-	  }
-	  
-	.anim_uline:after {
-		content: '';
-		position: absolute;
-		width: 100%;
-		transform: scaleX(0);
-		height: 1px;
-		bottom: 15px;
-		left: 0;
-		background-color: rgb(247, 198, 175);
-		transform-origin: bottom right;
-		transition: transform 0.25s ease-out;
-	}
-	
-	.anim_uline:hover:after {
-		transform: scaleX(1);
-		transform-origin: bottom left;
-	}
-
-	/* Cards */
-	
-	.info-wrap {
-		height: auto;
-		padding-top: 50px;
-		width: 100vw;
-		position: relative;
-		/* Center child horizontally*/
-		display: flex;
-		justify-content: center;
-
-	}
-
-	.textbox {
-		background-color: rgb(255, 255, 255);
-		color: rgb(0, 0, 0);
-		font-size: 15pt;
-		margin: 30%;
-		padding: 0.8%;
-		border-radius: 20px;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-
-	.textbox p {
-		margin: 20px;
-		text-align: center;
-	}
-
-	.textbox a {
-		color: blue;
-		text-decoration: underline;
-	}
-
-	#hello {
-		margin-top: 10vw;
-		width: 100vw;
-		/* Center child horizontally*/
-		display: flex;
-		justify-content: center;
-	}
-
-	#hellot {
-		width: fit-content;
-		padding-left: 30px;
-		padding-right: 30px;
-		height: fit-content;
-	}
-
-	.textbox h1 {
-		text-align: center;
-		font-size: 20pt;
-	}
-
-	#aboutme {
-		margin-top: 70vw;
-		margin-bottom: 100vh;
-	}
-
-	#abtextbox {
-		background-color: rgb(255, 255, 255);
-		color: rgb(0, 0, 0);
-		font-size: 15pt;
-		margin: 30%;
-		padding: 0.8%;
-		border-radius: 20px;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-
-	#projects {
-		margin-top: 0vw;
-	}
-
-	#projects .textbox {
-		background-color: transparent;
-		width: 60vw;
-		color: white;
-		text-align: center;
-	}
-	
-	#aboutme .textbox {
-		background-color: rgba(255, 255, 255, 0.945);
-		width: auto;
-		max-width: 400px;
-		color: rgb(0, 0, 0);
-		font-size: 20pt;
-		text-align: left;
-		padding: 30px;
-		transform: translateY(-45vh);
-	}
-
-	#contact {
-		transform: translateY(50vw);
-	}
-
-	.card {
-		width: 300px;
-		height: 200px;
-		padding: 2pc;
-		margin: 20pt;
-		margin-bottom: 30pt;
-		display: inline-block;
-		border-radius: 0.6pc;
-		background-color:rgb(156, 30, 23);
-	}
-
-	.label {
-		background-color: white;
-		width: fit-content;
-		height: fit-content;
-		padding-left: 30px;
-		padding-right: 30px;
-		border-radius: 15px;
-		font-family: 'Square Peg';
-		font-size: 20pt;
-		line-height: 60%;
-		color: rgb(41, 41, 41);
-	}
-
-	form {
-		width: 100%;
-		display: flexbox;
-	}
-	   
-	input {
-		width: 100%;
-		margin-bottom: 7px;
-		color: rgb(14, 14, 14);
-	}
-
-	textarea {
-		width: 100%;
-		min-width: 100%;
-		margin-bottom: 20px;
-		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.075);
-		color: rgb(14, 14, 14);
-	}
-	
-	button {
-		margin-left: 44.6%;
-		margin-bottom: 20px;
-		padding: 5px;
-		border-radius: 10px;
-		background-color: rgb(255, 212, 212);
-	}
+#send-button:hover {
+	background-color: rgb(212, 246, 255);
+}
 
 /***************************************************
  * Generated by SVG Artista on 12/13/2021, 11:57:17 AM
@@ -279,9 +391,9 @@ svg .svg-elem-1 {
 	stroke-width: 1px;
 	transition-delay: 50s;
 	transition: stroke-dashoffset 10s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0s,
-	fill 1.7s cubic-bezier(0.23, 1, 0.32, 1) 2.8s;
+		fill 1.7s cubic-bezier(0.23, 1, 0.32, 1) 2.8s;
 }
-  
+
 svg.active .svg-elem-1 {
 	stroke-dashoffset: 0;
 	transition-delay: 2s;
@@ -294,29 +406,29 @@ svg .svg-elem-2 {
 	fill: transparent;
 	stroke-width: 10px;
 	transition: stroke-dashoffset 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.12s,
-				  fill 1.7s cubic-bezier(0.23, 1, 0.32, 1) 2.9s;
+		fill 1.7s cubic-bezier(0.23, 1, 0.32, 1) 2.9s;
 
-  }
-  
-  svg.active .svg-elem-2 {
+}
+
+svg.active .svg-elem-2 {
 	transition-delay: 8s;
 	stroke-dashoffset: 0;
 	fill: #ffffff
 }
-  
+
 svg .svg-elem-3 {
-stroke-dashoffset: 1364.227783203125px;
-stroke-dasharray: 1364.227783203125px;
-fill: transparent;
-transition: stroke-dashoffset 7s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.24s,
-				fill 1.7s cubic-bezier(0.23, 1, 0.32, 1) 3s;
+	stroke-dashoffset: 1364.227783203125px;
+	stroke-dasharray: 1364.227783203125px;
+	fill: transparent;
+	transition: stroke-dashoffset 7s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.24s,
+		fill 1.7s cubic-bezier(0.23, 1, 0.32, 1) 3s;
 }
 
 svg.active .svg-elem-3 {
 	transition-delay: 5s;
-stroke-dashoffset: 0;
-stroke: #322F33;
-stroke-width: 2px;
-fill: #322F33;
+	stroke-dashoffset: 0;
+	stroke: #322F33;
+	stroke-width: 2px;
+	fill: #322F33;
 
 }
