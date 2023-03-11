@@ -1,5 +1,5 @@
 <h1>
-    <a href="https://www.matiduda.pl/" style="color: white; text-decoration: underline;text-decoration-style: dotted;">matiduda.pl
+    <a href="https://matiduda.netlify.app/" style="color: white; text-decoration: underline;text-decoration-style: dotted;">matiduda.netlify.app
     </a>
     &larr; <i>click</i>
 </h1>
